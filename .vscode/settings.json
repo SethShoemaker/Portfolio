@@ -1,0 +1,20 @@
+{
+    "remote.extensionKind": {
+
+        "pub.name": [
+            "ui"
+        ]
+    },
+    "cSpell.languageSettings": [
+    
+    ],
+    "liveSassCompile.settings.generateMap": false,
+    "liveSassCompile.settings.formats": [
+
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/assets/css",
+        }
+    ]
+}
