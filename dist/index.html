@@ -7,31 +7,48 @@
     <title>Seth Shoemaker</title>
 </head>
 <body>
-    <nav role='menubar' aria-role='menubar'>
+    <nav>
         <div id='name' role='menuitem' aria-label='home link'>
-            <a href="#home">Seth Shoemaker</a>
+            <span href="home"   role='link'     aria-label='home link'      class='content-links'>Seth Shoemaker</span>
         </div>
+        <ul class="links" id='desktop-links' aria-label="content links">
+            <li href='about' role='link' aria-label="About Link" class='content-links'>About</li>
+            <li href="skills" role='link' aria-label="Skills Link" class='content-links'>Skills</li>
+            <li href="projects" role='link' aria-label="Projects Link" class='content-links'>Projects</li>
+            <li role='link' aria-label="Resume Link" class='content-links'><a href="./resume.pdf" target='none'>Resume</a></li>
+            <li href="contact" role='link' aria-label="Contact Link" class='content-links'>Contact</li>
+        </ul>
         <div id="menu-icon" role='menuitem' aria-label='menu button'>
             <a id='menu-button' role='button' aria-role='button' aria-expanded="false">
-                <img src="./images/menu.svg" alt="menu icon">
+                <img src="./images/menu.svg" id='mobile-open' alt="open icon">
+                <img src="./images/close.svg" style='display: none;' id='mobile-close' alt="close icon">
             </a>
         </div>
-        <ul id="links" aria-label="content links">
-            <li href="#about" role='link' aria-label="About Link">About</li>
-            <li href="#skills" role='link' aria-label="Skills Link">Skills</li>
-            <li href="#projects" role='link' aria-label="Projects Link">Projects</li>
-            <li href="./assets/resume.pdf" target='none' role='link' aria-label="Resume Link">Resume</li>
-            <li href="#contact" role='link' aria-label="Contact Link">Contact</li>
+        <ul class="links" id="mobile-links" aria-label="content links" aria-expanded="false">
+            <li href='about' role='link' aria-label="About Link" class='content-links mobile-link'>About</li>
+            <li href="skills" role='link' aria-label="Skills Link" class='content-links mobile-link'>Skills</li>
+            <li href="projects" role='link' aria-label="Projects Link" class='content-links mobile-link'>Projects</li>
+            <li role='link' aria-label="Resume Link" class='content-links'><a href="./resume.pdf" target='none' class='mobile-link'>Resume</a></li>
+            <li href="contact" role='link' aria-label="Contact Link" class='content-links mobile-link'>Contact</li>
         </ul>
     </nav>
     <main>
         <div id="content-container">
-            <section id="home">
-                <h1>
-                    My name is 
-                    <span>Seth Shoemaker</span>
-                    and I make things for the web
-                </h1>
+            <section id="home" aria-label='home section'>
+                <span>My name is</span>
+                <h1>Seth Shoemaker</h1>
+                <span>and I make things for the web</span>
+                <div id="icons" aria-label='links'>
+                    <a href="https://github.com/SethShoemaker" aria-label='github link'target='none'><img src="./images/github.svg" alt="github"></a>
+                    <a href="https://www.linkedin.com/in/seth--shoemaker/" aria-label='linkedin link' target='none'><img src="./images/linkedin.svg" alt="linkedin"></a>
+                    <span href="contact" role='link' aria-label='contact link' class='content-links'>Contact</span>
+                </div>
+            </section>
+            <section id="about" aria-label='about section'>
+                <h2 class='section-header'>About Me</h2>
+                <p>
+                    I'm a full-stack web developer based in the Pittsburgh region. I'm a high-achieving student working on my web publishing degree. I love to create web applications that are accessible and easy to use. Some of my favorite tools are PHP, Laravel and AWS.
+                </p>
             </section>
         </div>
     </main>

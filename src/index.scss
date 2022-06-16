@@ -2,7 +2,7 @@ $darkBlue: #121217;
 $lightBlue:#0070f2;
 $white:#fff;
 
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600&display=swap');
 
 body{
     background-color: $darkBlue;
@@ -18,19 +18,23 @@ body{
         height:70px;
         width:95vw;
         margin:0 2.5vw;
-        position: relative;
+        position: fixed;
+        top:0;
+        left:0;
             
     
         #name{
             display: flex;
             align-items: center;
 
-            a{
+            span{
                 color:$white;
                 text-decoration: none;
-                font-size: calc(0.7rem + 1.05vw);
+                font-size: calc(1rem + 0.5vw);
                 font-weight: 300;
-                letter-spacing: calc(0.02rem + 0.07vw);
+                letter-spacing: calc(0.02rem + 0.03vw);
+                user-select: none;
+                cursor: pointer;
             }
         }
 
@@ -48,43 +52,66 @@ body{
                 background-color: $darkBlue;
                 display: flex;
                 align-items: center;
-                padding:5px;
+                justify-content: center;
+                height:35px;
+                width:35px;
 
                 img{
-                    max-width: 70%;
-                    max-height:70%;
+                    max-width:60%;
+                    max-height:60%;
                 }
             }
         }
 
-        #links{
-            list-style: none;
+        .links{
             display: flex;
-            justify-content: flex-end;
-            align-items: center;
+            list-style: none;
+            margin:0;
+            padding:0;
 
-            li{
+            li,a{
                 color:$white;
-                font-weight: 300;
-                font-size: calc(0.6rem + 0.6vw);
                 text-decoration: none;
-                letter-spacing: calc(0.05rem + 0.1vw);
-                margin-left:calc(0.02rem + 1.3vw);
+                user-select: none;
+                font-weight: 300;
+                font-size: calc(0.8rem + 0.34vw);
+                cursor: pointer;
             }
 
-            @media screen and (max-width:800px) {
+            &#desktop-links{
+                align-items: center;
+                justify-content: flex-end;
+                letter-spacing: calc(0.04rem + 0.04vw);
+
+                li{
+                    margin-left:calc(0.02rem + 1.3vw);
+                }
+
+                @media screen and (max-width:800px) {
+                    display: none !important;
+                }
+            }
+
+            &#mobile-links{
                 display: none;
                 margin:0;
                 padding:0;
-                position: absolute;
+                position: fixed;
                 flex-direction: column;
                 background-color: $darkBlue;
                 top:70px;
-                width:100vw;
                 left:0;
-                
+                width:100vw;
+                line-height: 30px;
+                padding-bottom:20px;
+
                 li{
-                    text-align: left;
+                    margin-left:calc(0.5rem + 0.5vw);
+                }
+
+
+                @media screen and (min-width:800px) {
+                    display: none !important;
                 }
             }
         }
@@ -92,18 +119,86 @@ body{
 
     main{
         #content-container{
+            width:47vw;
 
-            width:40vw;
-
-            margin-left:calc(17vw + 45px);
+            margin-left:calc(15vw + 45px);
             @media screen and (max-width: 800px) {
                 margin-left:10vw;
                 width:80vw;
             }
-            background-color: #fff;
     
-            #home{
+            section{
+                box-sizing: border-box;
+                height:100vh;
+                color:$white;
 
+                ::selection {
+                    color: $darkBlue;
+                    background:$white;
+                }
+
+                &#home{
+                    padding-top:calc(7rem + 8vw);
+
+                    span{
+                        font-weight: 200;
+                        font-size: calc(1.1rem + 0.9vw);
+                        margin:0;
+                        padding:0;
+                    }
+
+                    h1{
+                        font-weight: 600;
+                        font-size: calc(3.1rem + 2.8vw);
+                        margin:0;
+                        padding:0;
+                    }
+
+                    #icons{
+                        padding-top:calc(0.5rem + 0.5vw);
+                        display: flex;
+                        flex-direction: row;
+                        user-select: none;
+
+                        a{
+                            height:29px;
+                            width:29px;
+                            margin-right:calc(0.4rem + 0.7vw);
+                            display: flex;
+                            align-content: center;
+
+                            img{
+                                max-width: 100%;
+                                max-height:100%;
+                            }
+                        }
+                        span{
+                            box-sizing: border-box;
+                            width:fit-content;
+                            text-align: center;
+                            line-height: 29px;
+                            padding:0 10px;
+                            background-color: $lightBlue;
+                            font-size: calc(0.6rem + 0.6vw);
+                            color:$darkBlue;
+                            text-decoration: none;
+                            font-weight: 400;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                h2{
+                    font-size: calc(1rem + 3vw);
+                    font-weight: 600;
+                    margin-bottom:calc(0.8rem);
+                }
+
+                p{
+                    font-size: calc(0.8rem + 0.65vw);
+                    font-weight: 200;
+                    line-height:calc(1.5rem + 1.2vw);
+                }
             }
         }
     }
