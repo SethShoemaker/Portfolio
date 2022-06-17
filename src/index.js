@@ -56,7 +56,7 @@ import './index.scss';
     function goToSection(link){
         const sectionID = link.getAttribute('href');
         const section = document.getElementById(sectionID);
-        const scrollTop = (section.offsetTop) - 130;
+        const scrollTop = (section.offsetTop) - 150;
 
         window.scroll({
             top: scrollTop,

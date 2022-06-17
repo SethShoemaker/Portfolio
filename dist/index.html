@@ -8,8 +8,8 @@
 </head>
 <body>
     <nav>
-        <div id='name' role='menuitem' aria-label='home link'>
-            <span href="home"   role='link'     aria-label='home link'      class='content-links'>Seth Shoemaker</span>
+        <div id='name' role='link' aria-label='home link'>
+            <span href="home" role='link' aria-label='home link' class='content-links'>Seth Shoemaker</span>
         </div>
         <ul class="links" id='desktop-links' aria-label="content links">
             <li href='about' role='link' aria-label="About Link" class='content-links'>About</li>
@@ -39,16 +39,70 @@
                 <h1>Seth Shoemaker</h1>
                 <span>and I make things for the web</span>
                 <div id="icons" aria-label='links'>
-                    <a href="https://github.com/SethShoemaker" aria-label='github link'target='none'><img src="./images/github.svg" alt="github"></a>
-                    <a href="https://www.linkedin.com/in/seth--shoemaker/" aria-label='linkedin link' target='none'><img src="./images/linkedin.svg" alt="linkedin"></a>
-                    <span href="contact" role='link' aria-label='contact link' class='content-links'>Contact</span>
+                    <a href="https://github.com/SethShoemaker" aria-label='github link' target='none'><img src="./images/github.svg" alt="github">Github</a>
+                    <a href="https://www.linkedin.com/in/seth--shoemaker/" aria-label='linkedin link' target='none'><img src="./images/linkedin.svg" alt="linkedin">Linkedin</a>
+                    <a href="mailto:connect@sethshoemaker.com" aria-label='email link' id='email'><img src="./images/mail.svg" alt="email">Email</a>
                 </div>
             </section>
             <section id="about" aria-label='about section'>
-                <h2 class='section-header'>About Me</h2>
-                <p>
-                    I'm a full-stack web developer based in the Pittsburgh region. I'm a high-achieving student working on my web publishing degree. I love to create web applications that are accessible and easy to use. Some of my favorite tools are PHP, Laravel and AWS.
+                <h2>About Me</h2>
+                <p aria-label='about me'>
+                    I'm a full-stack web developer based in the Pittsburgh region. I'm also a high-achieving student working on my web publishing degree. I love to create web applications that solve problems and are easy to use.
                 </p>
+            </section>
+            <section id="skills" aria-label='skills section'>
+                <h2>Skills</h2>
+                <ul aria-label='skills list'>
+                    <div class="col" role='group' aria-label='skills column'>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>SASS</li>
+                        <li>Javascript</li>
+                        <li>jQuery</li>
+                        <li>Webpack</li>
+                    </div>
+                    <div class="col" role='group' aria-label='skills column'>
+                        <li>Git</li>
+                        <li>PHP</li>
+                        <li>Laravel</li>
+                        <li>MySQL</li>
+                        <li>AWS</li>
+                        <li>Adobe CC</li>
+                    </div>
+                </ul>
+            </section>
+            <section id="projects" aria-label="projects section">
+                <h2>Projects</h2>
+                <ul aria-label="projects list">
+                    <li>
+                        <h3>Zesty</h3>
+                        <p aria-label='about zesty'>
+                            Zesty is a web application made in PHP Laravel for people to share cooking recipes. To post a recipe, users are required to create an account. When posting a recipe, users enter information about their recipe such as the title, number of servings, a description, an image, list of ingredients, and the instructions. People looking for recipes can browse the front page, where the latest recipes are listed, or search Zesty for recipes that contain a certain word or phrase in their title, description or ingredients.
+                        </p>
+                        <div class="links">
+                            <a href="https://zesty.cooking" target="none">View Live</a>
+                            <a href="https://github.com/SethShoemaker/Zesty" target="none">View Code</a>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>Blunderr</h3>
+                        <p aria-label='about blunderr'>
+                            Blunderr is a web application built to allow organizations to track bugs in their software products. Organizations register themselves and the projects they have created, then assign clients to the projects. Clients then submit help tickets which will be processed by the development team. The development team consists of an organization owner, managers, and agents. The owner and the managers see incoming tickets and assign an agent to solve the problem. The agent sees the ticket, creates a solution, then sends it back to the owner and managers. If the owner or manager reviewing the ticket is satisfied with the agent's solution, they can approve the ticket and the status will be marked completed.                        </p>
+                        <div class="links">
+                            <a href="https://blunderr.net" target="none">View Live</a>
+                            <a href="https://github.com/SethShoemaker/Blunderr" target="none">View Code</a>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section id="contact" aria-label="contact section">
+                <h2>Contact</h2>
+                <p>
+                    Feel free to contact me, I usually answer within 24 hours. 
+                </p>
+                <a href="https://github.com/SethShoemaker" target='none' aria-label="github profile"><img src="./images/github.svg" alt="github">Github Profile</a>
+                <a href="https://www.linkedin.com/in/seth--shoemaker/" target='none' aria-label="linkedin profile"><img src="./images/linkedin.svg" alt="linkedin">Linkedin Profile</a>
+                <a href="mailto:connect@sethshoemaker.com" aria-label="email address"><img src="./images/mail.svg" alt="email">connect@sethshoemaker.com</a>
             </section>
         </div>
     </main>

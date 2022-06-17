@@ -14,5 +14,12 @@ module.exports = {
                 use: ['style-loader', 'css-loader', 'sass-loader'],
             }
         ]
-    }
+    },
+    devServer: {
+        static: {
+            directory: path.join(__dirname, 'dist'),
+        },
+        compress: true,
+        port: 9000,
+    },
 }
